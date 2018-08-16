@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[800, 600]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="path" alignment="0" pref="820" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                  <Component id="but_route" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="but_customer" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="but_position" min="-2" pref="89" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="but_job" min="-2" pref="78" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="path" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="but_route" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_customer" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_position" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_job" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="path">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="36" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe30;&#xe1a;&#xe1a;&#xe01;&#xe32;&#xe23;&#xe27;&#xe32;&#xe07;&#xe41;&#xe1c;&#xe19;&#xe01;&#xe32;&#xe23;&#xe02;&#xe19;&#xe2a;&#xe48;&#xe07;&#xe40;&#xe1e;&#xe37;&#xe48;&#xe2d;&#xe2b;&#xe32;&#xe40;&#xe2a;&#xe49;&#xe19;&#xe17;&#xe32;&#xe07;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe31;&#xe49;&#xe19;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe38;&#xe14;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_job">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe2d;&#xe1a;&#xe07;&#xe32;&#xe19;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_jobActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_position">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe17;&#xe35;&#xe48;&#xe2d;&#xe22;&#xe39;&#xe48;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_positionActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_customer">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_customerActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_route">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe2b;&#xe19;&#xe49;&#xe32;&#xe2b;&#xe25;&#xe31;&#xe01;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[87, 23]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_routeActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="data" min="-2" pref="191" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="593" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="Zipcode" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="txt_zipcode" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="but_search" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="but_add_position" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="data" min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Zipcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_zipcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_search" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_add_position" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="91" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="data">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe32;&#xe22;&#xe25;&#xe30;&#xe40;&#xe2d;&#xe35;&#xe22;&#xe14;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe35;&#xe48;&#xe2d;&#xe22;&#xe39;&#xe48;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Zipcode">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe2b;&#xe31;&#xe2a;&#xe44;&#xe1b;&#xe23;&#xe29;&#xe13;&#xe35;&#xe22;&#xe4c; :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_zipcode">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_zipcodeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_search">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe04;&#xe49;&#xe19;&#xe2b;&#xe32;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_searchActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_add_position">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="66" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe40;&#xe1e;&#xe34;&#xe48;&#xe21;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe35;&#xe48;&#xe2d;&#xe22;&#xe39;&#xe48;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_add_positionActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tb_position">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
