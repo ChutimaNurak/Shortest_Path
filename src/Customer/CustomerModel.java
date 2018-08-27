@@ -49,6 +49,7 @@ public class CustomerModel {
         try {
             ps = this.connect.prepareStatement(sql);
             result = ps.executeQuery();
+            result.next();
         } catch (SQLException ex) {
             Logger.getLogger(CustomerModel.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -99,7 +100,7 @@ public class CustomerModel {
        
     }
 
-    public void delete(int ID) {
+    public void delete(int id) {
         String sql = "DELETE * FROM customer WHERE ID = id";
         PreparedStatement ps;
         try {

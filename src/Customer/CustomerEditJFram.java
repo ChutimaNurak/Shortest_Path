@@ -12,16 +12,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import shortest_path.Main;
 
 /**
  *
  * @author Nannii
  */
 public class CustomerEditJFram extends javax.swing.JFrame {
-       public CustomerEditJFram() {
+
+    public CustomerEditJFram(String id_index) {
         initComponents();
-       }
+        int id_edit = Integer.parseInt(id_index);
+        setText(id_edit);
+//      String sql = "SELECT * FROM customer WHERE ID = " +id_edit+ " ";
+//      System.out.println(sql);
+
+    }
+
+    public void setText(int Id) {
+        try {
+            CustomerModel cus_model = new CustomerModel();
+//          System.out.println("Id in Function " +Id);
+            ResultSet res = cus_model.select_id(Id);
+            String name = res.getString("Name");
+            String telephone = res.getString("Telephone");
+            String email = res.getString("Email");
+            txt_name.setText(name);
+            txt_telephone.setText(telephone);
+            txt_email.setText(email);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(CustomerEditJFram.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -124,6 +147,11 @@ public class CustomerEditJFram extends javax.swing.JFrame {
 
         but_save.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
         but_save.setText("Save");
+        but_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_saveActionPerformed(evt);
+            }
+        });
 
         but_back.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
         but_back.setText("Back");
@@ -137,6 +165,11 @@ public class CustomerEditJFram extends javax.swing.JFrame {
         but_delete.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
         but_delete.setForeground(new java.awt.Color(255, 0, 0));
         but_delete.setText("Delete");
+        but_delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_deleteActionPerformed(evt);
+            }
+        });
 
         name.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
         name.setText("ชื่อ - นามสกุล :");
@@ -164,7 +197,7 @@ public class CustomerEditJFram extends javax.swing.JFrame {
         txt_email.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
 
         add_position.setFont(new java.awt.Font("TH SarabunPSK", 1, 24)); // NOI18N
-        add_position.setText("เพิ่มข้อมูลที่อยู่ลูกค้า ");
+        add_position.setText("แก้ไขข้อมูลที่อยู่ลูกค้า ");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -187,15 +220,15 @@ public class CustomerEditJFram extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                                     .addComponent(but_save, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(59, 59, 59)
+                                    .addGap(36, 36, 36)
                                     .addComponent(but_delete))
                                 .addGroup(jPanel5Layout.createSequentialGroup()
                                     .addComponent(email)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(txt_email, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(488, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(but_back, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,36 +287,65 @@ public class CustomerEditJFram extends javax.swing.JFrame {
     }//GEN-LAST:event_but_backActionPerformed
 
     private void but_jobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_jobActionPerformed
-        this.dispose();
-        JobIndexJFrame obj = new JobIndexJFrame();
-        obj.setVisible(true);
+        JobIndexJFrame job = new JobIndexJFrame();
+        job.setVisible(true);
     }//GEN-LAST:event_but_jobActionPerformed
 
     private void but_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_positionActionPerformed
-        this.dispose();
-        PositonIndexJFrame obj = new PositonIndexJFrame();
-        obj.setVisible(true);
+        PositonIndexJFrame position = new PositonIndexJFrame();
+        position.setVisible(true);
     }//GEN-LAST:event_but_positionActionPerformed
 
     private void but_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_customerActionPerformed
-        this.dispose();
-        CustomerIndexJFrame obj = new CustomerIndexJFrame();
-        obj.setVisible(true);
+        CustomerIndexJFrame customer = new CustomerIndexJFrame();
+        customer.setVisible(true);
     }//GEN-LAST:event_but_customerActionPerformed
 
     private void but_routeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_routeActionPerformed
-        this.dispose();
-        RouteIndexJFrame obj = new RouteIndexJFrame();
-        obj.setVisible(true);
+        RouteIndexJFrame route = new RouteIndexJFrame();
+        route.setVisible(true);
     }//GEN-LAST:event_but_routeActionPerformed
 
     private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
-        // TODO add your handling code here:
+//        CustomerModel model = new CustomerModel();
+//        
+//        ResultSet result = model.select();
+////        String a = result.getString("ID");
+//        System.out.println("txt_name" + this.IdEdit);
+//
+//        txt_name.setText(a);
     }//GEN-LAST:event_txt_nameActionPerformed
 
     private void txt_telephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telephoneActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_telephoneActionPerformed
+
+    private void but_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_saveActionPerformed
+        //GET Input
+        String name = this.txt_name.getText();
+        String telephone = this.txt_telephone.getText();
+        String email = this.txt_email.getText();
+
+        //New Model
+        CustomerModel model = new CustomerModel();
+        model.update(name, telephone, email, id);
+        //call insert function
+
+        //Change page
+        this.dispose();
+        CustomerIndexJFrame obj = new CustomerIndexJFrame();
+        obj.setVisible(true);
+    }//GEN-LAST:event_but_saveActionPerformed
+
+    private void but_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_deleteActionPerformed
+        CustomerModel delet = new CustomerModel;
+        model.delete(int id
+        );
+        
+        this.dispose();
+        CustomerIndexJFrame obj = new CustomerIndexJFrame();
+        obj.setVisible(true);
+    }//GEN-LAST:event_but_deleteActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel add_position;
@@ -304,4 +366,5 @@ public class CustomerEditJFram extends javax.swing.JFrame {
     private javax.swing.JTextField txt_name;
     private javax.swing.JTextField txt_telephone;
     // End of variables declaration//GEN-END:variables
+
 }

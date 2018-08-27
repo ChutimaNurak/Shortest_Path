@@ -5,20 +5,22 @@ import Positon.PositonIndexJFrame;
 import Route.RouteIndexJFrame;
 import java.sql.ResultSet;
 import net.proteanit.sql.DbUtils;
+//import java.awt.event.MouseAdapter;
+//import java.awt.event.MouseEvent;
 
 public class CustomerIndexJFrame extends javax.swing.JFrame {
+
     public CustomerIndexJFrame() {
         initComponents();
         showTable();
     }
-    
-    public void showTable(){
+
+    public void showTable() {
         CustomerModel model = new CustomerModel();
         ResultSet result = model.select();
         tb_customer.setModel(DbUtils.resultSetToTableModel(result));
     }
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -167,6 +169,11 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tb_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tb_customerMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tb_customer);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -230,21 +237,21 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void but_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_positionActionPerformed
-        this.dispose();
-        PositonIndexJFrame obj = new PositonIndexJFrame();
-        obj.setVisible(true);
+        //this.dispose();
+        PositonIndexJFrame position = new PositonIndexJFrame();
+        position.setVisible(true);
     }//GEN-LAST:event_but_positionActionPerformed
 
     private void but_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_customerActionPerformed
-        this.dispose();
-        CustomerIndexJFrame obj = new CustomerIndexJFrame();
-        obj.setVisible(true);
+        //this.dispose();
+        CustomerIndexJFrame customer = new CustomerIndexJFrame();
+        customer.setVisible(true);
     }//GEN-LAST:event_but_customerActionPerformed
 
     private void but_routeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_routeActionPerformed
-        this.dispose();
-        RouteIndexJFrame obj = new RouteIndexJFrame();
-        obj.setVisible(true);
+        //this.dispose();
+        RouteIndexJFrame rout = new RouteIndexJFrame();
+        rout.setVisible(true);
     }//GEN-LAST:event_but_routeActionPerformed
 
     private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
@@ -252,24 +259,34 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_nameActionPerformed
 
     private void but_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_searchActionPerformed
-        String name = txt_name.getText();
+        String name1 = txt_name.getText();
         CustomerModel model = new CustomerModel();
-        ResultSet result = model.select_search(name);
+        ResultSet result = model.select_search(name1);
         tb_customer.setModel(DbUtils.resultSetToTableModel(result));
     }//GEN-LAST:event_but_searchActionPerformed
 
     private void but_add_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_add_customerActionPerformed
-        this.dispose();
-        CustomerCreateJFram obj = new CustomerCreateJFram();
-        obj.setVisible(true);
+        //this.dispose();
+        CustomerCreateJFram save = new CustomerCreateJFram();
+        save.setVisible(true);
     }//GEN-LAST:event_but_add_customerActionPerformed
 
     private void but_jobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_jobActionPerformed
-        this.dispose();
-        JobIndexJFrame obj = new JobIndexJFrame();
-        obj.setVisible(true);
+        //this.dispose();
+        JobIndexJFrame job = new JobIndexJFrame();
+        job.setVisible(true);
     }//GEN-LAST:event_but_jobActionPerformed
 
+    private void tb_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_customerMouseClicked
+        int row = tb_customer.getSelectedRow();
+        String selectId = tb_customer.getValueAt(row, 0).toString();
+        //System.out.println("IndexId: " + selectId);
+
+        CustomerEditJFram edit = new CustomerEditJFram(selectId);
+        txt_name.setText(selectId);
+        edit.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_tb_customerMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton but_add_customer;
