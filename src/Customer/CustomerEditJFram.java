@@ -307,13 +307,7 @@ public class CustomerEditJFram extends javax.swing.JFrame {
     }//GEN-LAST:event_but_routeActionPerformed
 
     private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
-//        CustomerModel model = new CustomerModel();
-//        
-//        ResultSet result = model.select();
-////        String a = result.getString("ID");
-//        System.out.println("txt_name" + this.IdEdit);
-//
-//        txt_name.setText(a);
+
     }//GEN-LAST:event_txt_nameActionPerformed
 
     private void txt_telephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_telephoneActionPerformed
@@ -325,24 +319,18 @@ public class CustomerEditJFram extends javax.swing.JFrame {
         String name = this.txt_name.getText();
         String telephone = this.txt_telephone.getText();
         String email = this.txt_email.getText();
-
         //New Model
         CustomerModel model = new CustomerModel();
         model.update(name, telephone, email, id);
-        //call insert function
 
-        //Change page
-        this.dispose();
         CustomerIndexJFrame obj = new CustomerIndexJFrame();
         obj.setVisible(true);
     }//GEN-LAST:event_but_saveActionPerformed
 
     private void but_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_deleteActionPerformed
-        CustomerModel delet = new CustomerModel;
-        model.delete(int id
-        );
-        
-        this.dispose();
+        CustomerModel model = new CustomerModel();
+        model.delete(id);
+
         CustomerIndexJFrame obj = new CustomerIndexJFrame();
         obj.setVisible(true);
     }//GEN-LAST:event_but_deleteActionPerformed

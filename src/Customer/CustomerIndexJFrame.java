@@ -5,8 +5,6 @@ import Positon.PositonIndexJFrame;
 import Route.RouteIndexJFrame;
 import java.sql.ResultSet;
 import net.proteanit.sql.DbUtils;
-//import java.awt.event.MouseAdapter;
-//import java.awt.event.MouseEvent;
 
 public class CustomerIndexJFrame extends javax.swing.JFrame {
 
@@ -237,19 +235,19 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void but_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_positionActionPerformed
-        //this.dispose();
+        //ไปหน้าตำแหน่ง
         PositonIndexJFrame position = new PositonIndexJFrame();
         position.setVisible(true);
     }//GEN-LAST:event_but_positionActionPerformed
 
     private void but_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_customerActionPerformed
-        //this.dispose();
+        //ไปหน้าลูกค้า
         CustomerIndexJFrame customer = new CustomerIndexJFrame();
         customer.setVisible(true);
     }//GEN-LAST:event_but_customerActionPerformed
 
     private void but_routeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_routeActionPerformed
-        //this.dispose();
+        //ลไปหน้าเส้นทาง
         RouteIndexJFrame rout = new RouteIndexJFrame();
         rout.setVisible(true);
     }//GEN-LAST:event_but_routeActionPerformed
@@ -259,6 +257,7 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_nameActionPerformed
 
     private void but_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_searchActionPerformed
+        //ค้นหา
         String name1 = txt_name.getText();
         CustomerModel model = new CustomerModel();
         ResultSet result = model.select_search(name1);
@@ -266,13 +265,13 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_but_searchActionPerformed
 
     private void but_add_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_add_customerActionPerformed
-        //this.dispose();
+        //เพิ่มข้อมมูล
         CustomerCreateJFram save = new CustomerCreateJFram();
         save.setVisible(true);
     }//GEN-LAST:event_but_add_customerActionPerformed
 
     private void but_jobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_jobActionPerformed
-        //this.dispose();
+        //หน้ารอบงาน
         JobIndexJFrame job = new JobIndexJFrame();
         job.setVisible(true);
     }//GEN-LAST:event_but_jobActionPerformed
