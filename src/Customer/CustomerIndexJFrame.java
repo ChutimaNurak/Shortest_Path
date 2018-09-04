@@ -1,8 +1,7 @@
 package Customer;
 
-import Job.JobIndexJFrame;
+import Job.JobIndextJFrame;
 import Positon.PositonIndexJFrame;
-import Route.RouteIndexJFrame;
 import java.sql.ResultSet;
 import net.proteanit.sql.DbUtils;
 
@@ -10,12 +9,16 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
 
     public CustomerIndexJFrame() {
         initComponents();
+        //
         showTable();
     }
 
     public void showTable() {
+        //
         CustomerModel model = new CustomerModel();
+        //
         ResultSet result = model.select();
+        //
         tb_customer.setModel(DbUtils.resultSetToTableModel(result));
     }
 
@@ -26,11 +29,10 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        but_job = new javax.swing.JButton();
-        but_position = new javax.swing.JButton();
-        but_customer = new javax.swing.JButton();
-        but_route = new javax.swing.JButton();
         path = new javax.swing.JLabel();
+        but_job = new javax.swing.JButton();
+        but_customer = new javax.swing.JButton();
+        but_position = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         data = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
@@ -55,13 +57,24 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        path.setFont(new java.awt.Font("TH SarabunPSK", 1, 36)); // NOI18N
+        path.setText("ระบบการวางแผนการขนส่งเพื่อหาเส้นทางที่สั้นที่สุด");
+
         but_job.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
-        but_job.setText("รอบงาน");
+        but_job.setText("หน้าหลัก");
         but_job.setMaximumSize(new java.awt.Dimension(87, 23));
         but_job.setMinimumSize(new java.awt.Dimension(87, 23));
         but_job.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 but_jobActionPerformed(evt);
+            }
+        });
+
+        but_customer.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
+        but_customer.setText("ข้อมูลลูกค้า");
+        but_customer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                but_customerActionPerformed(evt);
             }
         });
 
@@ -75,54 +88,30 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
             }
         });
 
-        but_customer.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
-        but_customer.setText("ข้อมูลลูกค้า");
-        but_customer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                but_customerActionPerformed(evt);
-            }
-        });
-
-        but_route.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
-        but_route.setText("หน้าหลัก");
-        but_route.setMaximumSize(new java.awt.Dimension(87, 23));
-        but_route.setMinimumSize(new java.awt.Dimension(87, 23));
-        but_route.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                but_routeActionPerformed(evt);
-            }
-        });
-
-        path.setFont(new java.awt.Font("TH SarabunPSK", 1, 36)); // NOI18N
-        path.setText("ระบบการวางแผนการขนส่งเพื่อหาเส้นทางที่สั้นที่สุด");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(path, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(208, 208, 208)
-                .addComponent(but_route, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(249, 249, 249)
+                .addComponent(but_job, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(but_customer)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(but_position, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(but_job, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(265, Short.MAX_VALUE))
-            .addComponent(path, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(path, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(but_route, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(but_job, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(but_customer)
-                    .addComponent(but_position, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(but_job, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(but_position, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         data.setFont(new java.awt.Font("TH SarabunPSK", 1, 24)); // NOI18N
@@ -178,12 +167,8 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(313, 313, 313))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
@@ -195,22 +180,26 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
                         .addGap(130, 130, 130)
                         .addComponent(but_add_customer))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 642, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(309, 309, 309))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(44, 44, 44)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name)
                     .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(but_search)
                     .addComponent(but_add_customer))
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -234,65 +223,58 @@ public class CustomerIndexJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void but_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_positionActionPerformed
-        //ไปหน้าตำแหน่ง
-        PositonIndexJFrame position = new PositonIndexJFrame();
-        position.setVisible(true);
-    }//GEN-LAST:event_but_positionActionPerformed
-
-    private void but_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_customerActionPerformed
-        //ไปหน้าลูกค้า
-        CustomerIndexJFrame customer = new CustomerIndexJFrame();
-        customer.setVisible(true);
-    }//GEN-LAST:event_but_customerActionPerformed
-
-    private void but_routeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_routeActionPerformed
-        //ลไปหน้าเส้นทาง
-        RouteIndexJFrame rout = new RouteIndexJFrame();
-        rout.setVisible(true);
-    }//GEN-LAST:event_but_routeActionPerformed
-
     private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_nameActionPerformed
 
     private void but_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_searchActionPerformed
-        //ค้นหา
-        String name1 = txt_name.getText();
-        CustomerModel model = new CustomerModel();
-        ResultSet result = model.select_search(name1);
+        //ปุ่มค้นหา
+        String name2 = txt_name.getText();
+        CustomerModel mode2 = new CustomerModel();
+        ResultSet result = mode2.select_search(name2);
         tb_customer.setModel(DbUtils.resultSetToTableModel(result));
+        txt_name.setText("");
     }//GEN-LAST:event_but_searchActionPerformed
 
     private void but_add_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_add_customerActionPerformed
-        //เพิ่มข้อมมูล
+        //ปุ่มเพิ่มข้อมมูล
+        this.dispose();
         CustomerCreateJFram save = new CustomerCreateJFram();
         save.setVisible(true);
     }//GEN-LAST:event_but_add_customerActionPerformed
 
-    private void but_jobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_jobActionPerformed
-        //หน้ารอบงาน
-        JobIndexJFrame job = new JobIndexJFrame();
-        job.setVisible(true);
-    }//GEN-LAST:event_but_jobActionPerformed
-
     private void tb_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_customerMouseClicked
         int row = tb_customer.getSelectedRow();
         String selectId = tb_customer.getValueAt(row, 0).toString();
-        //System.out.println("IndexId: " + selectId);
 
-        CustomerEditJFram edit = new CustomerEditJFram(selectId);
-        txt_name.setText(selectId);
-        edit.setVisible(true);
+        CustomerEditJFram obj = new CustomerEditJFram(selectId);
+        obj.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_tb_customerMouseClicked
+
+    private void but_jobActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_jobActionPerformed
+        JobIndextJFrame index = new JobIndextJFrame();
+        index.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_but_jobActionPerformed
+
+    private void but_customerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_customerActionPerformed
+        CustomerIndexJFrame index = new CustomerIndexJFrame();
+        index.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_but_customerActionPerformed
+
+    private void but_positionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_positionActionPerformed
+        PositonIndexJFrame index = new PositonIndexJFrame();
+        index.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_but_positionActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton but_add_customer;
     private javax.swing.JButton but_customer;
     private javax.swing.JButton but_job;
     private javax.swing.JButton but_position;
-    private javax.swing.JButton but_route;
     private javax.swing.JButton but_search;
     private javax.swing.JLabel data;
     private javax.swing.JPanel jPanel1;

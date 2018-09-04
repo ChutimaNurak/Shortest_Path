@@ -23,13 +23,257 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="525" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="293" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="path" alignment="0" pref="976" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="path" alignment="0" pref="100" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="path">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="36" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe30;&#xe1a;&#xe1a;&#xe01;&#xe32;&#xe23;&#xe27;&#xe32;&#xe07;&#xe41;&#xe1c;&#xe19;&#xe01;&#xe32;&#xe23;&#xe02;&#xe19;&#xe2a;&#xe48;&#xe07;&#xe40;&#xe1e;&#xe37;&#xe48;&#xe2d;&#xe2b;&#xe32;&#xe40;&#xe2a;&#xe49;&#xe19;&#xe17;&#xe32;&#xe07;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe31;&#xe49;&#xe19;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe38;&#xe14;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="ID_route" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txt_id_route" min="-2" pref="135" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="ID_Job" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="txt_id_job" min="-2" pref="135" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
+                                  <Component id="Dis" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="txt_dis" min="-2" pref="135" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="date" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txt_date" min="-2" pref="135" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
+                          <Component id="add_position" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
+                          <Component id="but_save" min="-2" pref="71" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="but_delete" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="but_back" min="-2" pref="68" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="462" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                  <Component id="add_position" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ID_Job" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_id_job" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ID_route" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_id_route" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="date" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_date" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Dis" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_dis" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="but_save" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_back" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_delete" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="394" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="ID_Job">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="  &#xe23;&#xe2b;&#xe31;&#xe2a;&#xe23;&#xe2d;&#xe1a;&#xe07;&#xe32;&#xe19; : "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="ID_route">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe23;&#xe2b;&#xe31;&#xe2a;&#xe40;&#xe2a;&#xe49;&#xe19;&#xe17;&#xe32;&#xe07; :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_id_route">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_id_routeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="date">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="         &#xe27;&#xe31;&#xe19;&#xe40;&#xe14;&#xe37;&#xe2d;&#xe19;&#xe1b;&#xe35; &#xe41;&#xe25;&#xe30;&#xe40;&#xe27;&#xe25;&#xe32; :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_date">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_dateActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="Dis">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="        &#xe23;&#xe30;&#xe22;&#xe30;&#xe17;&#xe32;&#xe07;&#xe23;&#xe27;&#xe21;(&#xe01;&#xe34;&#xe42;&#xe25;&#xe40;&#xe21;&#xe15;&#xe23;) :"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_dis">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_save">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Save"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_saveActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_back">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Back"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_backActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="add_position">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe23;&#xe2d;&#xe1a;&#xe07;&#xe32;&#xe19;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_id_job">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_id_jobActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="but_delete">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="TH SarabunPSK" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Delete"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_deleteActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

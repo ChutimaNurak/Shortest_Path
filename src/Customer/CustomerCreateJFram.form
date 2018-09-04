@@ -45,32 +45,11 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="path" alignment="0" pref="800" max="32767" attributes="0"/>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
-                  <Component id="but_route" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="but_customer" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="but_position" min="-2" pref="89" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="but_job" min="-2" pref="78" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="path" min="-2" pref="80" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="but_route" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="but_customer" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="but_position" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="but_job" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
-              </Group>
+              <Component id="path" alignment="0" pref="100" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -83,68 +62,6 @@
             <Property name="text" type="java.lang.String" value="&#xe23;&#xe30;&#xe1a;&#xe1a;&#xe01;&#xe32;&#xe23;&#xe27;&#xe32;&#xe07;&#xe41;&#xe1c;&#xe19;&#xe01;&#xe32;&#xe23;&#xe02;&#xe19;&#xe2a;&#xe48;&#xe07;&#xe40;&#xe1e;&#xe37;&#xe48;&#xe2d;&#xe2b;&#xe32;&#xe40;&#xe2a;&#xe49;&#xe19;&#xe17;&#xe32;&#xe07;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe31;&#xe49;&#xe19;&#xe17;&#xe35;&#xe48;&#xe2a;&#xe38;&#xe14;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="but_job">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="TH SarabunPSK" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#xe23;&#xe2d;&#xe1a;&#xe07;&#xe32;&#xe19;"/>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_jobActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="but_position">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="TH SarabunPSK" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#xe17;&#xe35;&#xe48;&#xe2d;&#xe22;&#xe39;&#xe48;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_positionActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="but_customer">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="TH SarabunPSK" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe25;&#xe39;&#xe01;&#xe04;&#xe49;&#xe32;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_customerActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="but_route">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="TH SarabunPSK" size="18" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="&#xe2b;&#xe19;&#xe49;&#xe32;&#xe2b;&#xe25;&#xe31;&#xe01;"/>
-            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 23]"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_routeActionPerformed"/>
-          </Events>
-        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
@@ -153,50 +70,50 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="561" max="32767" attributes="0"/>
-                  <Component id="but_back" min="-2" pref="68" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="278" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="telephone" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txt_telephone" min="-2" pref="135" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="but_save" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="but_back" min="-2" pref="68" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="name" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="txt_name" min="-2" pref="135" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="email" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="but_save" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="telephone" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txt_telephone" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="name" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txt_name" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="email" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="txt_email" min="-2" pref="135" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="291" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="328" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="add_position" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="319" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="add_position" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="name" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_name" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -211,11 +128,12 @@
                       <Component id="email" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txt_email" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="but_save" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                  <Component id="but_back" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="87" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="but_save" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="but_back" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="286" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

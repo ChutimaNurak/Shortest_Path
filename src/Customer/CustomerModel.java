@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Customer;
 
 import java.sql.Connection;
@@ -13,18 +8,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import shortest_path.Connect;
 
-/**
- *
- * @author Nannii
- */
 public class CustomerModel {
 
     public Connection connect;
+
     public CustomerModel() {
         Connect c = new Connect();
         this.connect = c.connect;
     }
-
     //ดีกข้อมูลจากฐานข้อมูลมาแสดงในโปรแกรม
     public ResultSet select() {
         String sql = "SELECT * FROM customer ORDER BY ID ASC";
@@ -35,6 +26,7 @@ public class CustomerModel {
             ps = this.connect.prepareStatement(sql);
             // 4.ส่งคำสั่งไปประมวลผล
             result = ps.executeQuery();
+            
         } catch (SQLException ex) {
             Logger.getLogger(CustomerModel.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -48,7 +40,7 @@ public class CustomerModel {
         try {
             ps = this.connect.prepareStatement(sql);
             result = ps.executeQuery();
-            result.next();
+   
         } catch (SQLException ex) {
             Logger.getLogger(CustomerModel.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -57,7 +49,7 @@ public class CustomerModel {
 
     public ResultSet select_search(String name) {
         String sql = "SELECT * FROM customer WHERE Name LIKE '%" + name + "%'";
-        //System.out.println(sql);
+        //System.out.priหntln(sql);
         PreparedStatement ps;
         ResultSet result = null;
         try {
@@ -84,9 +76,9 @@ public class CustomerModel {
     }
 
     public void update(String name, String telephone, String email, int id) {
-        String sql = "UPDATE customer"
-                + "SET Name = '" + name + "', Telephone = '" + telephone + "', Email = '" + email + "'"
-                + "WHER ID = id";
+        String sql = "UPDATE customer "
+                + "SET Name = '" + name + "', Telephone = '" + telephone + "', Email = '" + email + "' "
+                + "WHERE ID = " + id;
         PreparedStatement ps;
         try {
             ps = this.connect.prepareStatement(sql);
@@ -98,7 +90,7 @@ public class CustomerModel {
     }
 
     public void delete(int id) {
-        String sql = "DELETE * FROM customer WHERE ID = id";
+        String sql = "DELETE FROM customer WHERE ID = " + id;
         PreparedStatement ps;
         try {
             ps = this.connect.prepareStatement(sql);

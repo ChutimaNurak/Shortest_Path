@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Route;
 
 import java.sql.Connection;
@@ -13,10 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import shortest_path.Connect;
 
-/**
- *
- * @author Nannii
- */
 public class RouteModel {
 public Connection connect;
 
@@ -40,8 +31,8 @@ public Connection connect;
         return result;
     }
 
-    public ResultSet select_id() {
-        String sql = "SELECT * FROM route WHERE ID_Route = 1 ORDER BY ID_Route ASC ";
+    public ResultSet select_id(int id_route) {
+        String sql = "SELECT * FROM job WHERE ID_Job = '" + id_route + "' ORDER BY ID_Job ASC ";
             PreparedStatement ps;
             ResultSet result = null;
         try {
@@ -67,25 +58,24 @@ public Connection connect;
         return result;
     }
 
-    public void insert() {
+    public void insert(int id_job,int id_pos, int seq, int dis ) {
         String sql = "INSERT INTO route"
-                + "(ID_Job,Sequence,Distance,ID_Position)"
-                + " VALUES(?,?,?,?)";
+                + "(ID_Job,ID_Position,Sequence,Distance)"
+                + " VALUES(" + id_job + ", " + id_pos + ", " + seq + ", " + dis + ")";
         PreparedStatement ps;
         System.out.println(sql);
         try {
             ps = this.connect.prepareStatement(sql);
             ps.executeUpdate();
-            System.out.println("บันทึกข้อมูลเรียบร้อย");
         } catch (SQLException ex) {
             Logger.getLogger(RouteModel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    public void update() {
+    public void update(int id_job,int id_pos, int seq, int dis, int id_route) {
         String sql = "UPDATE route"
-                + "SET ID_Job = ?, Sequence = ?, District =?, Distance = ?, ID_Position =?"
-                + "WHER ID_Route = ?";
+                + "SET ID_Job = " + id_job + ", ID_Position = " + id_pos + ", Sequence = " + seq + ", Distance = " + dis + " "
+                + "WHER ID_Job =" + id_route;
         PreparedStatement ps;
         try {
             ps = this.connect.prepareStatement(sql);
@@ -96,8 +86,8 @@ public Connection connect;
        
     }
 
-    public void delete() {
-        String sql = "DELETE * FROM route WHERE ID_Route = ?";
+    public void delete(int id_route) {
+        String sql = "DELETE FROM job WHERE ID_Job = " + id_route;
         PreparedStatement ps;
         try {
             ps = this.connect.prepareStatement(sql);
