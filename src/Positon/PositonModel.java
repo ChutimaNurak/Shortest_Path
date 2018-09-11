@@ -119,4 +119,8 @@ public class PositonModel {
             Logger.getLogger(PositonModel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    public ResultSet selectnameByIdposition() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

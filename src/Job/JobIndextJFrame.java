@@ -29,7 +29,7 @@ public class JobIndextJFrame extends javax.swing.JFrame {
         but_position = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         data = new javax.swing.JLabel();
-        Zipcode = new javax.swing.JLabel();
+        ID_Job = new javax.swing.JLabel();
         txt_job = new javax.swing.JTextField();
         but_search = new javax.swing.JButton();
         but_add_job = new javax.swing.JButton();
@@ -96,10 +96,10 @@ public class JobIndextJFrame extends javax.swing.JFrame {
         );
 
         data.setFont(new java.awt.Font("TH SarabunPSK", 1, 24)); // NOI18N
-        data.setText("ข้อมูลรอบงาน");
+        data.setText("รายละเอียดข้อมูลรอบงาน");
 
-        Zipcode.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        Zipcode.setText("รหัสรอบงาน :");
+        ID_Job.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        ID_Job.setText("ปี-เดือน-วัน :");
 
         txt_job.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
         txt_job.addActionListener(new java.awt.event.ActionListener() {
@@ -152,7 +152,7 @@ public class JobIndextJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(103, 103, 103)
-                        .addComponent(Zipcode)
+                        .addComponent(ID_Job)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_job, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -166,7 +166,7 @@ public class JobIndextJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(data)
-                .addGap(345, 345, 345))
+                .addGap(294, 294, 294))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +175,7 @@ public class JobIndextJFrame extends javax.swing.JFrame {
                 .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Zipcode)
+                    .addComponent(ID_Job)
                     .addComponent(txt_job, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(but_search)
                     .addComponent(but_add_job))
@@ -228,9 +228,9 @@ public class JobIndextJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_jobActionPerformed
 
     private void but_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_searchActionPerformed
-        int name1 = Integer.parseInt(txt_job.getText());
+        String date =txt_job.getText();
         JobModel mode1 = new JobModel();
-        ResultSet result = mode1.select_search(name1);
+        ResultSet result = mode1.select_search(date);
         tb_job.setModel(DbUtils.resultSetToTableModel(result));
         txt_job.setText("");
     }//GEN-LAST:event_but_searchActionPerformed
@@ -242,18 +242,12 @@ public class JobIndextJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_but_add_jobActionPerformed
 
     private void tb_jobMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_jobMouseClicked
-        int row = tb_job.getSelectedRow();
-        String selectId = tb_job.getValueAt(row, 0).toString();
 
-        this.dispose();
-        JobEditJFrame obj = new JobEditJFrame(selectId);
-        obj.setVisible(true);
-        this.dispose();
        
     }//GEN-LAST:event_tb_jobMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Zipcode;
+    private javax.swing.JLabel ID_Job;
     private javax.swing.JButton but_add_job;
     private javax.swing.JButton but_customer;
     private javax.swing.JButton but_job;

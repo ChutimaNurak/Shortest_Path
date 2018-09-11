@@ -22,13 +22,13 @@ public class CustomerEditJFram extends javax.swing.JFrame {
             CustomerModel cus_model = new CustomerModel();
             //System.out.println("Id in Function " +Id);
             ResultSet res = cus_model.select_id(Id);
-            while(res.next()) {
-            String name = res.getString("Name");
-            String telephone = res.getString("Telephone");
-            String email = res.getString("Email");
-            txt_name.setText(name);
-            txt_telephone.setText(telephone);
-            txt_email.setText(email);
+            while (res.next()) {
+                String name = res.getString("Name");
+                String telephone = res.getString("Telephone");
+                String email = res.getString("Email");
+                txt_name.setText(name);
+                txt_telephone.setText(telephone);
+                txt_email.setText(email);
             }
         } catch (SQLException ex) {
             Logger.getLogger(CustomerEditJFram.class.getName()).log(Level.SEVERE, null, ex);
@@ -36,7 +36,6 @@ public class CustomerEditJFram extends javax.swing.JFrame {
 
     }
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

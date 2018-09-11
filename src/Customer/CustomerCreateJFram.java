@@ -166,22 +166,26 @@ public class CustomerCreateJFram extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_telephoneActionPerformed
 
     private void but_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_saveActionPerformed
-        //GET Input
+        //ปุ่ม save
+
+        //กำหนดค่าตัวแปร
         String name = this.txt_name.getText();
         String telephone = this.txt_telephone.getText();
         String email = this.txt_email.getText();
-        //New Model
-        CustomerModel model = new CustomerModel();
-        model.insert(name, telephone, email);
-        //call insert function
 
-        //Change page
+        //สร้าง model ใหม่
+        CustomerModel model = new CustomerModel();
+        //เรียกใช้ฟังชั่น insert
+        model.insert(name, telephone, email);
+
+        //ไปหน้า Indext
         this.dispose();
         CustomerIndexJFrame obj = new CustomerIndexJFrame();
         obj.setVisible(true);
     }//GEN-LAST:event_but_saveActionPerformed
 
     private void but_backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_backActionPerformed
+        //ไปหน้า Indext
         this.dispose();
         CustomerIndexJFrame obj = new CustomerIndexJFrame();
         obj.setVisible(true);

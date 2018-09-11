@@ -43,8 +43,8 @@ public class JobModel {
         return result;
     }
 
-    public ResultSet select_search(int id_job) {
-        String sql = "SELECT * FROM job WHERE ID_Job LIKE '%" + id_job + "%'";
+    public ResultSet select_search(String date) {
+        String sql = "SELECT * FROM job WHERE Date LIKE '%" + date + "%'";
         PreparedStatement ps;
         ResultSet result = null;
         try {
