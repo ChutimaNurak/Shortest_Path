@@ -13,7 +13,7 @@ public class JobCreateJFrame extends javax.swing.JFrame {
 
     public void showTable() {
         PositonModel model = new PositonModel();
-        ResultSet result = model.selectnameByIdposition();
+        ResultSet result = model.selectnameById();
         tb_job.setModel(DbUtils.resultSetToTableModel(result));
     }
 
@@ -30,8 +30,8 @@ public class JobCreateJFrame extends javax.swing.JFrame {
         txt_dis = new javax.swing.JTextField();
         but_save = new javax.swing.JButton();
         but_back = new javax.swing.JButton();
-        txt_id_zip = new javax.swing.JTextField();
-        ID_zip = new javax.swing.JLabel();
+        txt_name = new javax.swing.JTextField();
+        ID_name = new javax.swing.JLabel();
         but_search = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_job = new javax.swing.JTable();
@@ -81,15 +81,15 @@ public class JobCreateJFrame extends javax.swing.JFrame {
             }
         });
 
-        txt_id_zip.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        txt_id_zip.addActionListener(new java.awt.event.ActionListener() {
+        txt_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        txt_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_id_zipActionPerformed(evt);
+                txt_nameActionPerformed(evt);
             }
         });
 
-        ID_zip.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        ID_zip.setText("รหัสไปรษณีย์ :");
+        ID_name.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        ID_name.setText("ชื่อ - นามสกุล :");
 
         but_search.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
         but_search.setText("ค้นหา");
@@ -138,9 +138,9 @@ public class JobCreateJFrame extends javax.swing.JFrame {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(300, 300, 300))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(ID_zip)
+                        .addComponent(ID_name)
                         .addGap(18, 18, 18)
-                        .addComponent(txt_id_zip, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(but_search)
                         .addGap(228, 228, 228))
@@ -167,8 +167,8 @@ public class JobCreateJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(but_search)
-                    .addComponent(txt_id_zip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ID_zip))
+                    .addComponent(txt_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ID_name))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -212,23 +212,23 @@ public class JobCreateJFrame extends javax.swing.JFrame {
         obj.setVisible(true);
     }//GEN-LAST:event_but_backActionPerformed
 
-    private void txt_id_zipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_id_zipActionPerformed
+    private void txt_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_id_zipActionPerformed
+    }//GEN-LAST:event_txt_nameActionPerformed
 
     private void but_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_but_searchActionPerformed
-        String zip = txt_id_zip.getText();
+        String name = txt_name.getText();
         PositonModel mode1 = new PositonModel();
-        ResultSet result = mode1.select_search(zip);
-        txt_id_zip.setModel(DbUtils.resultSetToTableModel(result));
-        txt_id_zip.setText("");
+        ResultSet result = mode1.select_search(name);
+        tb_job.setModel(DbUtils.resultSetToTableModel(result));
+        txt_name.setText("");
         
     }//GEN-LAST:event_but_searchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ID_Route;
-    private javax.swing.JLabel ID_zip;
+    private javax.swing.JLabel ID_name;
     private javax.swing.JLabel add_position;
     private javax.swing.JButton but_back;
     private javax.swing.JButton but_save;
@@ -242,6 +242,6 @@ public class JobCreateJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel path;
     private javax.swing.JTable tb_job;
     private javax.swing.JTextField txt_dis;
-    private javax.swing.JTextField txt_id_zip;
+    private javax.swing.JTextField txt_name;
     // End of variables declaration//GEN-END:variables
 }
